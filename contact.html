@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB222 Store - Contact</title>
+    
+    <style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+    html, body{
+      background-size: cover;
+      background-position: center;
+      font-family: sans-serif;
+    }
+
+    .form{
+      width: 900px;
+      margin:auto;
+      color: black;
+      text-align:center;
+    }
+
+    .Info{
+      background-color:lightcyan;
+      width: 700px;
+      margin: auto;
+    }
+
+    form{
+      padding:15px;
+    }
+
+    #name{
+      margin-left:20px;
+      margin-top: 30px;
+      color:black;
+      font-size: 20px; 
+    }
+
+    .f_name{
+      position:relative;
+      left: 150px;
+      top:-40px;
+      line-height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      padding:0 20px;
+    }
+
+    .l_name{
+      position:relative;
+      left:410px;
+      top:-70px;
+      border-radius: 5px;
+      font-size: 15px;
+      padding:0 20px;
+      line-height: 40px;
+    }
+
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  </head>
+  <body>
+
+  <div class="header" id="top-header">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="settler text-uppercase p-3">
+
+      <a class="navbar-brand" href="#">Gadget Corner
+        <img src="images/logo.png" alt="logo" height="30" width="30"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+      </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add to Cart</a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="form">
+        <h1>Registration Form</h1>
+      </div> 
+
+      <div class="Info">
+        <form method=post>
+          <div id="name">
+            <h2 class="Name">Name</h2>
+            <label class="f_label">First Name</label>
+            <input  class="f_Name" type="Text" name="firstName" required>
+
+            <br></br>
+
+            <label class="l_label">Last Name</label>
+            <input  class="l_Name" type="Text" name="secondName" required>
+
+            <h2 class="mail">Email</h2>
+            <input class="email" type="Text" name="email" required>
+
+            <h2 class="Address">Address</h2>
+            <input class="address" type="Text" name="address" required>
+
+            <h2 class="city">City</h2>
+            <select class="option" name="city" required>
+              <option>Toronto, Ontario</option>
+              <option>Vancouver, British Columbia</option>
+              <option>Montreal, Quebec</option>
+              <option>Niagara Falls, Ontario</option>
+              <option>Victoria, British Columbia</option>
+              <option>Halifax, Nova Scotia</option>
+              <option>Quebec City, Quebec</option>
+              <option>Calgary, Alberta</option>
+              <option>Ottawa, Ontario</option>
+              <option>Calgary, Alberta</option>
+            </select>
+
+            <h2 class="phone">Phone</h2>
+            <label class="country-code">Country Code</label>
+            <input class="digit" type="tel" name="country-code" required>
+
+            <br></br>
+    
+            <label class="contact-number">Phone Number</label>
+            <input class="contact" type="tel" name="contact-number" required>
+
+            <h2 class="postal">Postal Code</h2>
+            <input class="digit" type="Text" name="postal-code" required>
+            
+            
+              <h2 id="client">Choose</h2>
+              <input type="checkbox" name="option" value="mark" required>Would you like to be phoned?
+           
+            
+              <h2 id="client">Choose an option</h2>
+              <input class="f_Box" type="radio" name="choice" value="select" required>Question
+              <input class="s_Box" type="radio" name="choice" value="select" required>Comment
+              <input class="t_Box" type="radio" name="choice" value="select" required>Order Problem
+              
+          
+
+            <tr>
+              <h2>Message</h2>
+              <td>
+                <textarea rows="6" cols="70"></textarea>
+              </td>
+            </tr>
+
+            <input type="hidden" id="Name" name="MmyName" value="Md Rafi Al Arabi Bhuiyan">
+
+            <br></br>
+            <button type="submit">Register</button>
+           
+          </div>
+          </div>
+        </form>
+      </div>
+
+    <!--    
+
+    Part 2: Contact Us Page
+
+    Requirements:
+
+    1. Use the same header/footer, colours, fonts, etc. as your index.html page.
+    It should be obvious to the user they they are still on the same site, and that
+    contact.html is part of your store.
+
+    2. Include an HTML Form for the user to fill out his or her information along
+    with their message to you. Your form should including the following, and all
+    fields should be mandatory unless otherwise noted, and use the most appropriate <input> type:
+    
+        - First Name
+        - Last Name
+        - Email Address 
+        - Address
+        - City (use a <datalist> for autocomplete of common Canadian cities)
+        - Phone Number (must be a valid Canadian Phone Number, use regex)
+        - Postal Code (must be a valid Canadian Postal Code, use regex)
+        - Checkbox Option to be phoned ("Would you like to be phoned?")
+        - Radio Options to specify what this is about: one of "Question",
+          "Comment", or "Order Problem". If the user selects "Order Problem",
+          dynamically reveal another input box to enter the order number. In the
+          case of "Comment" or "Question" hide this input box.
+        - A large area to enter the message that they want to send
+        - A hidden input field with your name
+
+    3. The form should submit to https://httpbin.org/post using the POST method,
+    and only allow the user to submit when all data has been entered and there
+    aren't any validation errors.  The data posted to httpbin.org should include
+    all data defined in the form above (e.g., visible and hidden fields).
+
+  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+</body>
+</html>
